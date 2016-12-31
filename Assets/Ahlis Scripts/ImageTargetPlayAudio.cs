@@ -8,13 +8,17 @@ ITrackableEventHandler
 {
 	private TrackableBehaviour mTrackableBehaviour;
 	private AudioSource audio;
-
+	private Transform viewer;
 
 	public Transform cube;
+	public Rigidbody dandelionTop;
 
 	void Start()
 	{
 		audio = GetComponent<AudioSource> ();
+		viewer = Camera.main.transform;
+		Physics.gravity = new Vector3(0f,9.81f,0f);
+
 		mTrackableBehaviour = GetComponent<TrackableBehaviour>();
 		if (mTrackableBehaviour)
 		{
@@ -22,11 +26,12 @@ ITrackableEventHandler
 		}
 	}
 
-	void Update() {
+	void FixedUpdate() {
 		float vol = MicInput.MicLoudness;
 		if (vol > 0.01f) {
-			cube.transform.localEulerAngles += Vector3.up * vol * 3f;
-			Debug.Log(vol);
+			dandelionTop.AddExplosionForce (vol * 100f, viewer.position, 10);
+			//cube.transform.localEulerAngles += Vector3.up * vol * 3f;
+			Debug.Log(vol * 100f);
 		}
 
 	}
@@ -41,7 +46,7 @@ ITrackableEventHandler
 		{
 			// Play audio when target is found
 			audio.Play();
-			StartCoroutine ("ScaleUp");
+			//StartCoroutine ("ScaleUp");
 		}
 		else
 		{

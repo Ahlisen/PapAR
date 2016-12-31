@@ -11,6 +11,7 @@ public class WindReciever : MonoBehaviour {
 	void Start () {
 		rig = GetComponent<Rigidbody> ();
 		viewer = Camera.main.transform;
+		Physics.gravity = new Vector3(0f,9.81f,0f);
 	}
 	
 	// Update is called once per frame
@@ -19,7 +20,9 @@ public class WindReciever : MonoBehaviour {
 	}
 
 	void FixedUpdate() {
-		rig.AddExplosionForce (100f, viewer.position, 10f);
+		if (MicInput.MicLoudness > 0.01f) {
+			rig.AddExplosionForce (100f, viewer.position, MicInput.MicLoudness * 500f);
+		}
 		//rig.AddForceAtPosition( Vector3.left * 30, viewer.position);
 	}
 }
