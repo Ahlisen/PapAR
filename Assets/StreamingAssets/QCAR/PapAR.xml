@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="weed" size="2.000000 1.068778" />
+    <ImageTarget name="grass" size="10.000000 10.000000" />
+    <ImageTarget name="Forest" size="1.000000 0.664000" />
+    <ImageTarget name="first-frame" size="10.000000 5.625000" />
     <ImageTarget name="stoneTexture" size="1.000000 0.663333" />
   </Tracking>
 </QCARConfig>
