@@ -4,7 +4,7 @@
     <Files>
       <File FileName="Assets\Ahlis Scripts\ImageTargetDandelion.cs" Line="1" Column="1" />
       <File FileName="Assets\Ahlis Scripts\WindReciever.cs" Line="1" Column="1" />
-      <File FileName="Assets\Ahlis Scripts\ImageVideo.cs" Line="41" Column="34" />
+      <File FileName="Assets\Ahlis Scripts\ImageVideo.cs" Line="48" Column="35" />
       <File FileName="Assets\Ahlis Resources\PlayMovieOnSpace.cs" Line="1" Column="1" />
       <File FileName="Assets\Ahlis Scripts\TitleVoice.cs" Line="1" Column="1" />
     </Files>
