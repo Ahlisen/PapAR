@@ -81,7 +81,7 @@ public class MicInput : MonoBehaviour {
 				InitMic();
 				_isInitialized=true;
 			}
-		}      
+		}
 		if (!focus)
 		{
 			//Debug.Log("Pause");
